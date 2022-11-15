@@ -1,5 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1312px;
+    margin: 0 auto;
 }
 
 .menu {
@@ -8,12 +19,109 @@ body {
     font-size: 18px;
 }
 
+.menu-icons {
+    display: flex;
+    gap: 24px;
+}
+
 nav {
     display: flex;
     gap: 50px;
 }
 
 nav a {
-    color: #000;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+}
+
+header {
+    background: linear-gradient(99.19deg, #0195FF -5.85%, #6049FD 20.43%, #8206FF 42.58%, #CC00FF 74.1%, #FF00A8 102.63%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 24px 64px 118px 64px;
+}
+
+.headline {
+    padding-top: 96px;
+    width: 694px;
+}
+
+.headline-name {
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.headline-introduction {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.2em;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+.headline-location {
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 24px;
+    color: rgb(55, 55, 55);
+    font-weight: 600;
+    padding-top: 72px;
+}
+
+.project-card {
+    display: flex;
+    padding: 32px 92px 0 92px;
+    gap: 32px;
+    background: rgba(255, 0, 188, 0.38);
+    color: #FFF;
+    transition: all .5s;
+}
+
+.project-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+}
+
+.project-card h2,
+.project-card p {
+    margin: 0;
+    padding: 0;
+}
+
+.project-card h2 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 10px
+}
+
+.project-card-description {
+    font-size: 24px;
+}
+
+footer {
+    padding: 72px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-icons img {
+    width: 24px;
 }
