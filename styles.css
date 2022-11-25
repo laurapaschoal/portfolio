@@ -204,3 +204,8 @@ h3 {
     margin-top: 64px;
 
 }
+
+.iphone-mockup {
+    position: absolute;
+    z-index: 1000;
+}
