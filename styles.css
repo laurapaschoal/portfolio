@@ -16,7 +16,7 @@ strong {
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .container {
@@ -53,14 +53,14 @@ img {
 }
 
 .row-or-column {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 900px) {
-    .row-or-column {
-        flex-direction: column;
-    }
+  .row-or-column {
+    flex-direction: column;
+  }
 }
 
 .menu-icons {
@@ -133,7 +133,8 @@ h1 {
 
 .project-card {
   display: flex;
-  padding: 3.5px 7vw 0 7vw;
+  width: 100%;
+  padding: 3.5vw 7vw 0 7vw;
   gap: 3.5vw;
   background: rgba(255, 210, 157);
   color: #373737;
@@ -215,9 +216,20 @@ footer {
   margin-bottom: 64px;
 }
 
+@media screen and (max-width: 900px) {
+    .work-title {
+        margin-bottom: 32px;
+    }
+}
+
 h3 {
   font-weight: 600;
   margin-bottom: 0px;
+}
+
+.work-summary-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .work-summary-column p {
@@ -227,6 +239,12 @@ h3 {
 .work-summary {
   display: flex;
   gap: 128px;
+}
+
+@media screen and (max-width: 900px) {
+  .work-summary {
+    gap: 0;
+  }
 }
 
 .work-section {
@@ -255,12 +273,27 @@ h3 {
 
 .more-projects-images {
   display: flex;
-  gap: 100px;
+  gap: 3.5vw;
   margin-top: 30px;
 }
 
-.video-margin {
-  margin-bottom: 16px;
+@media screen and (min-width: 900px) {
+  .more-projects-images .project-card {
+    padding: 1.75vw 3.5vw 0 3.5vw;
+    gap: 1.75vw;
+  }
+
+  .more-projects-images .project-card h2 {
+    font-size: calc(min(100vw / 48, 22px));
+  }
+
+  .more-projects-images .project-card-description {
+    font-size: calc(min(100vw / 72, 16px));
+  }
+
+  .video-margin {
+    margin-bottom: 16px;
+  }
 }
 
 /* ABOUT */
