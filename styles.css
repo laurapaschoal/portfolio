@@ -288,6 +288,7 @@ h4 {
 .work-summary-column {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .work-summary-column p {
@@ -312,6 +313,22 @@ h4 {
 .work-section-color {
   background: #fff5c0;
   padding: 16px 0;
+}
+
+.work-66-days .work-header {
+  background: #FFD29D;
+}
+
+.work-66-days .work-section-color {
+  background: #FFE5C7;
+}
+
+.work-esencial .work-header {
+  background: #9DE8FF;
+}
+
+.work-esencial .work-section-color {
+  background: #DAF1F7;
 }
 
 .work-section h2,
