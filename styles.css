@@ -52,6 +52,17 @@ img {
   }
 }
 
+.row-or-column {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 900px) {
+    .row-or-column {
+        flex-direction: column;
+    }
+}
+
 .menu-icons {
   display: flex;
   gap: 24px;
@@ -122,8 +133,8 @@ h1 {
 
 .project-card {
   display: flex;
-  padding: 32px 64px 0 64px;
-  gap: 32px;
+  padding: 3.5px 7vw 0 7vw;
+  gap: 3.5vw;
   background: rgba(255, 210, 157);
   color: #373737;
   transition: all 0.5s;
@@ -132,14 +143,8 @@ h1 {
 }
 
 .project-card-image {
-  width: 100%;
-  max-width: 555px;
-}
-
-@media screen and (max-width: 900px) {
-  .project-card {
-    flex-direction: column-reverse;
-  }
+  width: 50%;
+  align-self: flex-end;
 }
 
 .project-card-yellow {
@@ -162,13 +167,13 @@ h1 {
 }
 
 .project-card h2 {
-  font-size: 32px;
+  font-size: calc(min(100vw / 32, 32px));
   font-weight: 600;
   padding-top: 10px;
 }
 
 .project-card-description {
-  font-size: 24px;
+  font-size: calc(min(100vw / 48, 24px));
 }
 
 footer {
