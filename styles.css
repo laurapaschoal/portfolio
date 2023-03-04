@@ -8,6 +8,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   font-size: 16px;
+  color: #000;
 }
 
 body {
@@ -40,6 +41,11 @@ img {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.logo {
+  text-decoration: none;
+  color: #000;
 }
 
 .menu {
