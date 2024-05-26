@@ -69,7 +69,7 @@
           class="project-grid"
           style="grid-template-areas: 'item1 item2' 'item1 item3'"
         >
-          <div class="reveal-holder" style="grid-area: item1">
+          <div class="reveal-holder keep-vertical" style="grid-area: item1">
             <div class="reveal-block" data-aos="reveal-top"></div>
             <div
               class="project-grid-card"
@@ -152,7 +152,7 @@
               "
             ></div>
           </div>
-          <div class="reveal-holder" style="grid-area: item2">
+          <div class="reveal-holder keep-vertical" style="grid-area: item2">
             <div class="reveal-block" data-aos="reveal-top"></div>
             <div
               class="project-grid-card"
@@ -197,14 +197,14 @@
         </div>
       </div>
 
-      <div>
-        <div
-          class="project-grid project-grid-2-items"
-          style="grid-template-areas: 'item1 item2'"
-        >
-          <div class="reveal-holder" style="grid-area: item1">
-            <div class="reveal-block" data-aos="reveal-top"></div>
-            <div>
+      <div class="hstack mobile-vstack" style="gap: 20px">
+        <div class="vstack" style="width: 100%; gap: 0">
+          <div
+            class="project-grid project-grid-1-item"
+            style="grid-template-areas: 'item1'"
+          >
+            <div class="reveal-holder" style="grid-area: item1">
+              <div class="reveal-block" data-aos="reveal-top"></div>
               <div
                 class="project-grid-card"
                 style="
@@ -213,15 +213,21 @@
                   background-image: url('images/home/thuisbezorgd-1.png');
                 "
               ></div>
-              <div class="vstack" style="margin-top: 16px; gap: 4px">
-                <div class="project-grid-title">Thuizbezorgd</div>
-                <div class="project-grid-subtitle">App Redesign</div>
-              </div>
             </div>
           </div>
-          <div class="reveal-holder" style="grid-area: item2">
-            <div class="reveal-block" data-aos="reveal-top"></div>
-            <div>
+          <div class="vstack" style="margin-top: 16px; gap: 4px">
+            <div class="project-grid-title">Thuizbezorgd</div>
+            <div class="project-grid-subtitle">App Redesign</div>
+          </div>
+        </div>
+
+        <div class="vstack" style="width: 100%; gap: 0">
+          <div
+            class="project-grid project-grid-1-item"
+            style="grid-template-areas: 'item1'"
+          >
+            <div class="reveal-holder" style="grid-area: item1">
+              <div class="reveal-block" data-aos="reveal-top"></div>
               <div
                 class="project-grid-card"
                 style="
@@ -230,11 +236,11 @@
                   background-image: url('images/home/essencial-1.png');
                 "
               ></div>
-              <div class="vstack" style="margin-top: 16px; gap: 4px">
-                <div class="project-grid-title">Esencial</div>
-                <div class="project-grid-subtitle">UX Research, Website</div>
-              </div>
             </div>
+          </div>
+          <div class="vstack" style="margin-top: 16px; gap: 4px">
+            <div class="project-grid-title">Esencial</div>
+            <div class="project-grid-subtitle">UX Research, Website</div>
           </div>
         </div>
       </div>
@@ -243,9 +249,9 @@
     <!-- Contact -->
 
     <footer class="container vstack" style="gap: 16px">
-      <div class="hstack" style="font-size: 24px">
+      <div class="footer-title">
         Let's connect, have a chat and have a coffee!
-        <div style="font-size: 36px">☕</div>
+        <span class="footer-title-coffee">☕</span>
       </div>
       <div class="footer-icons">
         <a href="https://medium.com/@lauraestevesps" target="_blank"
