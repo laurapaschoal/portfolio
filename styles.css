@@ -4,8 +4,10 @@
 
 body {
   background-color: #ffffff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
   margin: 0;
   font-size: 16px;
   color: #000;
@@ -29,9 +31,22 @@ img {
   max-width: 100%;
 }
 
+.hstack {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+.vstack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .container {
   width: 100%;
-  max-width: 1112px;
+  max-width: 1330px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -134,26 +149,24 @@ header {
 
 .headline {
   padding-top: 96px;
-  width: 794px;
+  width: 792px;
   max-width: 100%;
 }
 
 .headline-name {
-  font-weight: lighter;
-  font-size: 40px;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 .headline-introduction {
-  font-weight: 600;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.2em;
   padding-top: 12px;
   padding-bottom: 12px;
 }
 
 .headline-location {
-  font-weight: lighter;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 900px) {
@@ -181,12 +194,78 @@ h1 {
   }
 }
 
-.container-projects {
-  display: flex;
-  flex-direction: column;
-  padding-top: 32px;
-  gap: 32px;
+.project-grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    grid-template-areas: "item1" "item2" "item3" !important;
+  }
+  .project-grid.project-grid-1-item {
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(1, 1fr) !important;
+    grid-template-areas: "item1" !important;
+  }
+  .project-grid.project-grid-2-items {
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    grid-template-areas: "item1" "item2" !important;
+  }
+  .project-grid > div {
+    max-height: 473px;
+  }
+}
+
+.reveal-holder {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
   width: 100%;
+}
+
+.reveal-block {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+[data-aos="reveal-top"] {
+  transform: scaleY(1);
+  transform-origin: 100% 0%;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+[data-aos="reveal-top"].aos-animate {
+  transform: scaleY(0);
+}
+
+.project-grid-card {
+  background-position: center;
+  background-size: cover;
+  max-height: 100%;
+  /* transition: background-size 0.3s ease-in-out; */
+}
+
+/*
+.project-grid-card:hover {
+  background-size: 110%;
+} */
+
+.project-grid-title {
+  font-weight: 600;
+  color: #373737;
+}
+
+.project-grid-subtitle {
+  font-weight: 400;
+  color: #7d7d7d;
 }
 
 .project-card {
@@ -236,8 +315,8 @@ h1 {
 }
 
 footer {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: 180px;
+  padding-bottom: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -321,19 +400,19 @@ h4 {
 }
 
 .work-66-days .work-header {
-  background: #FFD29D;
+  background: #ffd29d;
 }
 
 .work-66-days .work-section-color {
-  background: #FFE5C7;
+  background: #ffe5c7;
 }
 
 .work-esencial .work-header {
-  background: #9DE8FF;
+  background: #9de8ff;
 }
 
 .work-esencial .work-section-color {
-  background: #DAF1F7;
+  background: #daf1f7;
 }
 
 .work-section h2,

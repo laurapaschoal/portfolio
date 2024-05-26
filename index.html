@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laura's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
   </head>
@@ -14,10 +21,13 @@
       <div class="menu container">
         <a class="logo" href="/">Laura Paschoal | UX/UI DESIGNER</a>
         <nav class="menu-bar js-menu-bar">
-          <img src="icons/close-black.svg" height="20px" class="menu-mobile-close js-menu-mobile-close" />
+          <img
+            src="icons/close-black.svg"
+            height="20px"
+            class="menu-mobile-close js-menu-mobile-close"
+          />
 
-          <a href="#">Home</a>
-          <a href="#work">Work</a>
+          <a href="/">Work</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
 
@@ -30,73 +40,233 @@
             /></a>
           </div>
         </nav>
-        <img src="icons/menu.svg" height="24px" class="menu-mobile js-menu-mobile" />
+        <img
+          src="icons/menu.svg"
+          height="24px"
+          class="menu-mobile js-menu-mobile"
+        />
       </div>
-      <div class="headline container">
-        <div class="headline-name">Hi, I am Laura Paschoal!</div>
-        <div class="headline-introduction">
-          I'm a UX/UI Designer with a passion about creating human-centered
-          experiences that make the user's lives a good journey.
+      <div class="container">
+        <div class="headline">
+          <div class="headline-name">
+            <div class="hstack">
+              <div style="font-size: 22px; margin-top: 2px">👋</div>
+              <div>Hi, I'm Laura Paschoal!</div>
+            </div>
+          </div>
+          <div class="headline-introduction">
+            I'm a UX/UI Designer with a passion about creating human-centered
+            experiences that make the user's lives a good journey.
+          </div>
+          <div class="headline-location">Based in Amsterdam, NL</div>
         </div>
-        <div class="headline-location">Based in Amsterdam, NL</div>
       </div>
     </header>
 
-    <section class="container container-projects">
-      <h1 id="work">RECENT PROJECTS</h1>
-      <a href="66-days.html" class="project-card">
-        <img
-          class="project-card-image"
-          src="app-66-days.png"
-          alt="App 66 Days Project Image"
-        />
-        <div class="project-card-description">
-          <h2>66 DAYS</h2>
-          <p>Let's start a new habit today!</p>
+    <section class="container vstack" style="gap: 32px">
+      <div>
+        <div
+          class="project-grid"
+          style="grid-template-areas: 'item1 item2' 'item1 item3'"
+        >
+          <div class="reveal-holder" style="grid-area: item1">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div
+              class="project-grid-card"
+              style="
+                width: 100%;
+                height: 971px;
+                background-image: url('images/home/pandria-1.png');
+              "
+            ></div>
+          </div>
+          <div class="reveal-holder" style="grid-area: item2">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div
+              class="project-grid-card"
+              style="
+                width: 100%;
+                height: 473px;
+                background-image: url('images/home/pandria-2.png');
+              "
+            ></div>
+          </div>
+          <div class="reveal-holder" style="grid-area: item3">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div
+              class="project-grid-card"
+              style="
+                width: 100%;
+                height: 473px;
+                background-image: url('images/home/pandria-3.png');
+              "
+            ></div>
+          </div>
         </div>
-      </a>
-      <a href="thuisbezorgd.html" class="project-card project-card-yellow">
-        <img
-          class="project-card-image"
-          src="app-thuisbezorgd.png"
-          alt="App Thuisbezorgd Project Image"
-        />
-        <div class="project-card-description">
-          <h2>Thuisbezorgd</h2>
-          <p>Delivering the best food.</p>
-        </div>
-      </a>
-      <a href="esencial.html" class="project-card project-card-blue">
-        <img
-          class="project-card-image"
-          src="website-esencial.png"
-          alt="Website Esencial Project Image"
-        />
-        <div class="project-card-description">
-          <h2>Esencial</h2>
-          <p>Solving problems for your business.</p>
-        </div>
-      </a>
-    </section>
 
-    <!-- About -->
+        <div class="vstack" style="margin-top: 16px; gap: 4px">
+          <div class="project-grid-title">Pandria</div>
+          <div class="project-grid-subtitle">
+            Landing Page, Product Prototype, Pitch
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="project-grid project-grid-1-item"
+          style="grid-template-areas: 'item1'"
+        >
+          <div class="reveal-holder" style="grid-area: item1">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div
+              class="project-grid-card"
+              style="
+                width: 100%;
+                height: 971px;
+                background-image: url('images/home/eathybrids-1.png');
+              "
+            ></div>
+          </div>
+        </div>
+
+        <div class="vstack" style="margin-top: 16px; gap: 4px">
+          <div class="project-grid-title">Eat Hybrids</div>
+          <div class="project-grid-subtitle">UX Research, Landing Page</div>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="project-grid project-grid-2-items"
+          style="grid-template-areas: 'item1 item2'"
+        >
+          <div class="reveal-holder" style="grid-area: item1">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div
+              class="project-grid-card"
+              style="
+                width: 100%;
+                height: 971px;
+                background-image: url('images/home/langwatch-1.png');
+              "
+            ></div>
+          </div>
+          <div class="reveal-holder" style="grid-area: item2">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div
+              class="project-grid-card"
+              style="
+                width: 100%;
+                height: 971px;
+                background-image: url('images/home/langwatch-2.png');
+              "
+            ></div>
+          </div>
+        </div>
+
+        <div class="vstack" style="margin-top: 16px; gap: 4px">
+          <div class="project-grid-title">LangWatch</div>
+          <div class="project-grid-subtitle">Product Prototype</div>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="project-grid project-grid-1-item"
+          style="grid-template-areas: 'item1'"
+        >
+          <div class="reveal-holder" style="grid-area: item1">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div
+              class="project-grid-card"
+              style="
+                width: 100%;
+                height: 971px;
+                background-image: url('images/home/66days-1.png');
+              "
+            ></div>
+          </div>
+        </div>
+
+        <div class="vstack" style="margin-top: 16px; gap: 4px">
+          <div class="project-grid-title">66 Days</div>
+          <div class="project-grid-subtitle">
+            UX Research, UI implementation, App
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="project-grid project-grid-2-items"
+          style="grid-template-areas: 'item1 item2'"
+        >
+          <div class="reveal-holder" style="grid-area: item1">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div>
+              <div
+                class="project-grid-card"
+                style="
+                  width: 100%;
+                  height: 473px;
+                  background-image: url('images/home/thuisbezorgd-1.png');
+                "
+              ></div>
+              <div class="vstack" style="margin-top: 16px; gap: 4px">
+                <div class="project-grid-title">Thuizbezorgd</div>
+                <div class="project-grid-subtitle">App Redesign</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-holder" style="grid-area: item2">
+            <div class="reveal-block" data-aos="reveal-top"></div>
+            <div>
+              <div
+                class="project-grid-card"
+                style="
+                  width: 100%;
+                  height: 473px;
+                  background-image: url('images/home/essencial-1.png');
+                "
+              ></div>
+              <div class="vstack" style="margin-top: 16px; gap: 4px">
+                <div class="project-grid-title">Esencial</div>
+                <div class="project-grid-subtitle">UX Research, Website</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact -->
 
-    <footer class="container">
-      <div class="footer-title">Let's connect</div>
-      <p>Get in touch for opportunities or just to grab a coffee and chat ☕</p>
+    <footer class="container vstack" style="gap: 16px">
+      <div class="hstack" style="font-size: 24px">
+        Let's connect, have a chat and have a coffee!
+        <div style="font-size: 36px">☕</div>
+      </div>
       <div class="footer-icons">
-        <a href="mailto:lauraestevesps@gmail.com" target="_blank"
-          ><img src="icons/email-black.svg" alt="email icon"
-        /></a>
         <a href="https://medium.com/@lauraestevesps" target="_blank"
           ><img src="icons/medium-black.svg" alt="medium icon"
+        /></a>
+        <a href="mailto:lauraestevesps@gmail.com" target="_blank"
+          ><img src="icons/email-black.svg" alt="email icon"
         /></a>
         <a href="https://www.linkedin.com/in/laurapaschoal/" target="_blank"
           ><img src="icons/linkedin-black.svg" alt="linkedin icon"
         /></a>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 50,
+        duration: 500,
+      });
+    </script>
   </body>
 </html>
