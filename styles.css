@@ -7,7 +7,7 @@ body {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   font-size: 16px;
   color: #373737;
@@ -275,6 +275,14 @@ h1 {
   color: #7d7d7d;
 }
 
+.gray {
+  color: #7D7D7D
+}
+
+.semibold {
+  font-weight: 500;
+}
+
 .project-card {
   display: flex;
   width: 100%;
@@ -331,15 +339,15 @@ footer {
 }
 
 .footer-title {
-  font-size: 24px;
+  font-size: 16px;
   display: flex;
   gap: 8px;
 }
 
 .footer-title-coffee {
-  font-size: 36px;
+  font-size: 16px;
   display: inline-flex;
-  margin-top: -5px;
+  margin-top: -1px;
 }
 
 @media screen and (max-width: 900px) {
