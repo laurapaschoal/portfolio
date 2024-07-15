@@ -13,6 +13,46 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
+
+    <!-- additional for the carousel -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
+    <style>
+      .slick-prev::before,
+      .slick-next::before {
+        display: none;
+      }
+      .slick-prev,
+      .slick-next {
+        z-index: 999;
+        width: 56px;
+        height: 56px;
+      }
+      .slick-prev {
+        left: 25px;
+      }
+      .slick-next {
+        right: 25px;
+      }
+      .slick-arrow {
+        transition: all 0.1s ease-in-out;
+        opacity: 0;
+      }
+      .pandria-slides-wrapper:hover .slick-arrow {
+        opacity: 1;
+      }
+      .pandria-slides-wrapper:hover .slick-arrow.slick-disabled {
+        opacity: 0;
+      }
+    </style>
   </head>
 
   <body class="work-esencial">
@@ -132,6 +172,43 @@
       </div>
     </div>
 
+    <div class="pandria-slides-wrapper" style="width: 100%; overflow-x: hidden; margin-top: 75px">
+      <div class="pandria-slides">
+        <div>
+          <img
+            src="images/pandria/pandria-carousel-1.png"
+            style="
+              width: calc(50vw - 40px);
+              margin: 32px 16px;
+              margin-left: 32px;
+              box-shadow: 0 0 20px #66666640;
+            "
+          />
+        </div>
+        <div>
+          <img
+            src="images/pandria/pandria-carousel-2.png"
+            style="
+              width: calc(50vw - 40px);
+              margin: 32px 16px;
+              box-shadow: 0 0 20px #66666640;
+            "
+          />
+        </div>
+        <div>
+          <img
+            src="images/pandria/pandria-carousel-3.png"
+            style="
+              width: calc(50vw - 40px);
+              margin: 32px 16px;
+              margin-right: 32px;
+              box-shadow: 0 0 20px #66666640;
+            "
+          />
+        </div>
+      </div>
+    </div>
+
     <footer class="container">
       <div class="footer-title">Let's connect</div>
       <p>Get in touch for opportunities or just to grab a coffee and chat ☕</p>
@@ -147,5 +224,37 @@
         /></a>
       </div>
     </footer>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".pandria-slides").slick({
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 2,
+          centerMode: false,
+          variableWidth: true,
+          centerPadding: "50px",
+          touchThreshold: 30,
+          arrows: true,
+          nextArrow:
+            '<button type="button" class="slick-next"><img src="icons/arrow-left.svg" /></button>',
+          prevArrow:
+            '<button type="button" class="slick-prev"><img src="icons/arrow-right.svg" /></button>',
+        });
+      });
+    </script>
   </body>
 </html>
